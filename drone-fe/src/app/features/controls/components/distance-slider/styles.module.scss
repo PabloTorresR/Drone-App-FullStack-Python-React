@@ -1,0 +1,59 @@
+@import 'src/styles/colors';
+
+.distanceSlider__container {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+}
+.distanceSlider {
+  width: 8px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__thumb {
+    width: 20px;
+    height: 20px;
+    background-color: #f6f6f6;
+    border: 2px solid $color-dark;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 4px 4px 10px #c5c5c5, -4px -4px 10px #ffffff;
+    &:hover {
+      background-color: $color-dark;
+    }
+    &:active {
+      background-color: #c5c5c5;
+      box-shadow: inset 4px 4px 10px #c5c5c5, inset -4px -4px 10px #ffffff;
+    }
+  }
+  &__track {
+    width: 8px;
+    height: 200px;
+    // background: linear-gradient(145deg, #e0e0e0, #f6f6f6);
+    background: $color-highlight;
+    border-radius: 8px;
+    &:nth-child(1) {
+      display: none;
+    }
+  }
+  &__distance {
+    height: 256px;
+    width: 96px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &__label {
+      color: $color-text;
+      background-color: $color-light;
+      font-weight: bold;
+    }
+    &__value {
+      color: $color-text;
+      background-color: $color-light;
+      font-weight: bold;
+    }
+  }
+}

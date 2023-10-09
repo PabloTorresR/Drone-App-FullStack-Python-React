@@ -1,0 +1,4 @@
+.vscode/
+drone-fe/node_modules/
+
+server/__pycache__.py

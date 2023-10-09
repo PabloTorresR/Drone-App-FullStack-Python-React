@@ -1,0 +1,33 @@
+@import 'src/styles/colors';
+
+$label-width: 48px;
+.droneLabel {
+  position: absolute;
+  left: calc(75% - $label-width / 2);
+  height: 128px;
+  width: $label-width;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 48px;
+
+  gap: 4px;
+  > div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    color: $color-text;
+  }
+  > h3 {
+    font-style: italic;
+    font-weight: light;
+    color: $color-text-light;
+  }
+  > h4 {
+    margin-top: 32px;
+    font-weight: bold;
+    color: $color-text;
+  }
+}

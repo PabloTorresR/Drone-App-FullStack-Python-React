@@ -1,0 +1,26 @@
+@import 'src/styles/colors';
+
+$label-width: 48px;
+.worldLabel {
+  position: absolute;
+  top: 56px;
+  left: calc(50% - $label-width / 2);
+  height: 128px;
+  width: $label-width;
+  display: flex;
+  // flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  > div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: $color-text;
+    display: flex;
+    gap: 8px;
+  }
+  > h3 {
+    color: $color-text-light;
+  }
+}

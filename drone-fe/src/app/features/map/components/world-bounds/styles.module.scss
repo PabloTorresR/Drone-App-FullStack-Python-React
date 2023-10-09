@@ -1,0 +1,86 @@
+@import 'src/styles/colors';
+
+.worldBounds {
+  position: relative;
+  border-radius: 8px;
+  background: #e3f4f4;
+  box-shadow: inset 16px 16px 32px #bac8c8, inset -16px -16px 32px #ffffff;
+  border: 8px solid $color-very-light;
+  margin-bottom: 32px;
+
+  &.-activeleft {
+    animation: blink-left 2s linear infinite;
+    border-left: 8px solid transparent;
+  }
+
+  &.-activeright {
+    animation: blink-right 2s linear infinite;
+    border-right: 8px solid transparent;
+  }
+
+  &.-activeforward {
+    animation: blink-forward 2s linear infinite;
+    border-top: 8px solid transparent;
+  }
+
+  &.-activebackward {
+    animation: blink-backward 2s linear infinite;
+    border-bottom: 8px solid transparent;
+  }
+
+  &.-activeup,
+  &.-activedown {
+    animation: blink-background 2s linear infinite;
+    background: transparent;
+  }
+}
+
+@keyframes blink-left {
+  0%,
+  100% {
+    border-left-color: transparent;
+  }
+  50% {
+    border-left-color: #ff6969;
+  }
+}
+
+@keyframes blink-right {
+  0%,
+  100% {
+    border-right-color: transparent;
+  }
+  50% {
+    border-right-color: #ff6969;
+  }
+}
+
+@keyframes blink-forward {
+  0%,
+  100% {
+    border-top-color: transparent;
+  }
+  50% {
+    border-top-color: #ff6969;
+  }
+}
+
+@keyframes blink-backward {
+  0%,
+  100% {
+    border-bottom-color: transparent;
+  }
+  50% {
+    border-bottom-color: #ff6969;
+  }
+}
+
+@keyframes blink-background {
+  0%,
+  100% {
+    background-color: transparent;
+  }
+  50% {
+    background-color: #ff6969;
+  }
+}
